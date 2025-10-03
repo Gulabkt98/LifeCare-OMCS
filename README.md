@@ -1,67 +1,113 @@
-# The Online Medical Consultation System
+🏥 Online Medical Consultation System (OMCS)
 
-The OMCS is an online service that allows patients and doctors to effectively communicate with each other from the comfort of their homes. It provides necessary facilities of consultation booking, physical appointment booking, providing online prescriptions, and a two-way feedback system.
+The Online Medical Consultation System (OMCS) is a web-based platform that enables patients and doctors to connect seamlessly from the comfort of their homes.
 
-## How to run the application locally
+Patients can book consultations (online or physical), receive digital prescriptions, and share feedback, while doctors can manage appointments, provide prescriptions, and interact with patients effectively.
 
-Clone the repository onto your desktop and navigate to the root directory. Run the command `npm i` to install all the necessary dependencies.
+🚀 Features
+👩‍⚕️ For Patients
 
-IMPORTANT: If you are using a local MongoDB database, do not forget to run the `mongod` command before starting the application.
+Browse and filter doctors by specialization
 
-After this, in the project directory, you can run the application using:
+Book online consultations
 
-### `npm run dev`
+Schedule physical appointments
 
-Runs the app in the development mode and runs the backend server.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+View pending & confirmed appointments
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Receive prescriptions via email
 
-Make sure you use Node.js with version 20+.
+Provide feedback after consultations
 
-### `npm run build`
+Get important email notifications
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+🧑‍⚕️ For Doctors
 
-## Dependencies
+Update working hours, location, and clinic details
 
-Some of the important dependencies used in this project are:
-1) `express (v4.19.1)`: A Node.js web application framework that provides a set of features for building web applications. Mainly used for the backend.
-2) `mongoose (v8.2.1)`: An Object Data Modelling (ODM) tool for MongoDB and Node.js.
-3) `react (v18.2.0)`: A frontend library for building user interfaces. It is declarative, component-based, and efficient. React makes it easy to create interactive UIs by using a declarative approach to programming.
-4) `tailwindcss (v3.4.1)`: An open-source CSS framework that allows users to build websites without leaving their HTML
-5) `dotenv (v16.4.5)`: A highly important package to process environment variables, whose setup has been explained below.
-6) `nodemon (v3.1.0)`: A javascript file executor that restarts with changes in the source file.
-7) `concurrently (v8.2.2)`: A package used to run multiple scripts together. Here it is used to run the frontend and the backend servers together.
-8) `bcrypt (v5.1.1)`: Used for encrypting the user passwords before storing them in the database.
+Manage consultation requests (accept/reject)
 
-## Environment Variables
-You need to create a  `.env` file in the root directory of the project. This should have the following content:
+Book physical appointments with patients
 
-```bash
-MONGO_URI = # any MongoDB database URI. For testing, we recommend you to use mongodb://localhost:27071/omcs (this will locally create an OMCS database for you)
-JWT_SECRET = # use the jwt_secret_gen.js file in the backend directory of the folder and paste the output here
-EMAIL = omcs.seproject@gmail.com
-APP_PASSWORD = # contact us to fill this field
-```
+Send online prescriptions directly
 
-## Features of the application
-### For patients
-- Filter and View Doctors
-- Book Consultations
-- View Pending Consultations
-- View Booked Appointment Details
-- Receive online prescription via email
-- Provide Feedback for completed consultations
-- Receive important email notifications
-### For Doctors
-- Update working hours, location, clinic etc.
-- View incoming consultation requests
-- Reject consultations
-- Book a physical appointment with the patient
-- Send an online prescription
-- Receive notifications when a patient provides a feedback
-- Reply to the beforementioned feedback
+Receive notifications on patient feedback
 
+Reply to patient feedback
+
+⚙️ Tech Stack
+
+Frontend: React (v18.2.0), TailwindCSS (v3.4.1)
+
+Backend: Node.js (Express v4.19.1), MongoDB (Mongoose v8.2.1)
+
+Authentication & Security: JWT, bcrypt (v5.1.1)
+
+Utilities: dotenv (v16.4.5), nodemon (v3.1.0), concurrently (v8.2.2)
+
+🛠️ Installation & Setup
+1. Clone the Repository
+git clone https://github.com/your-username/omcs.git
+cd omcs
+
+2. Install Dependencies
+npm install
+
+3. Configure Environment Variables
+
+Create a .env file in the root directory with the following content:
+
+MONGO_URI=mongodb://localhost:27071/omcs
+JWT_SECRET= # generate using /backend/jwt_secret_gen.js
+EMAIL=omcs.seproject@gmail.com
+APP_PASSWORD= # contact admin for credentials
+
+4. Run MongoDB
+
+If using local MongoDB, make sure to start the service:
+
+mongod
+
+5. Start Development Server
+npm run dev
+
+
+Runs the frontend & backend together.
+Visit 👉 http://localhost:3000
+
+6. Build for Production
+npm run build
+
+📂 Scripts
+
+npm run dev → Start development server (frontend + backend)
+
+npm run build → Build frontend for production
+
+🔑 Dependencies
+
+Some key dependencies include:
+
+express – Server-side framework
+
+mongoose – ODM for MongoDB
+
+react – Frontend library
+
+tailwindcss – Styling framework
+
+bcrypt – Password hashing
+
+dotenv – Environment variable handling
+
+concurrently – Run multiple scripts in parallel
+
+👥 Contributors
+
+gulabkt98
+
+Team Members from SE Project (add more if needed)
+
+📧 Contact
+
+For setup issues or credentials, contact: gulabgkg99@gmail.com
