@@ -47,7 +47,7 @@ Utilities: dotenv (v16.4.5), nodemon (v3.1.0), concurrently (v8.2.2)
 
 🛠️ Installation & Setup
 1. Clone the Repository
-git clone https://github.com/your-username/omcs.git
+git clone [ttps://github.com/your-username/omcs.g](https://github.com/Gulabkt98/LifeCare-OMCS)it
 cd omcs
 
 2. Install Dependencies
@@ -59,7 +59,7 @@ Create a .env file in the root directory with the following content:
 
 MONGO_URI=mongodb://localhost:27071/omcs
 JWT_SECRET= # generate using /backend/jwt_secret_gen.js
-EMAIL=omcs.seproject@gmail.com
+EMAIL=gulabgkg99@gmail.com
 APP_PASSWORD= # contact admin for credentials
 
 4. Run MongoDB
