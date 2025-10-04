@@ -2,6 +2,7 @@
 	"name": "omcs",
 	"version": "0.1.0",
 	"private": true,
+	"homepage": ".",
 	"engines": {
 		"node": "20.x"
 	},
@@ -58,6 +59,7 @@
 		]
 	},
 	"devDependencies": {
+		"@babel/plugin-proposal-private-property-in-object": "^7.21.11",
 		"@types/bcrypt": "^5.0.2",
 		"@types/jsonwebtoken": "^9.0.6",
 		"mocha": "^10.3.0",
