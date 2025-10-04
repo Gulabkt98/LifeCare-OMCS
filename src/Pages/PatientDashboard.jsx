@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import LOCATIONS from '../constants/locations';
 import { useLocation, useNavigate } from 'react-router-dom';
 import PatientProfile from '../Components/Patient/PatientProfile';
 import DoctorData from '../Components/Patient/DoctorData';
@@ -115,24 +116,12 @@ const PatientDashBoard = () => {
 					<div className='flex flex-col justify-center w-full md:w-[calc(100%-24rem)]'>
 						<div className='pt-24 m-auto pb-1 border-red-600 flex justify-around items-center md:w-[calc(100%-10rem)]'>
 							{window.location.pathname !== '/patient-dashboard/pending' && ( // the dropdown below allows patients to change their location and view doctors in that location
-								<select id='countries' className='block m-2 md:min-w-0 rounded-md p-2 border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-green-600 sm:text-sm sm:leading-6 h-8' onChange={handleLocationChange} value={location}>
-									<option value={loc}>{loc} ( Current location )</option>
-									<option value='Jaipur'>Jaipur</option>
-									<option value='Delhi'>Delhi</option>
-									<option value='Bangalore'>Bangalore</option>
-									<option value='Kharagpur'>Kharagpur</option>
-									<option value='Mumbai'>Mumbai</option>
-									<option value='Chennai'>Chennai</option>
-									<option value='Kolkata'>Kolkata</option>
-									<option value='Hyderabad'>Hyderabad</option>
-									<option value='Pune'>Pune</option>
-									<option value='Ahmedabad'>Ahmedabad</option>
-									<option value='Surat'>Srinagar</option>
-									<option value='Kanpur'>Kanpur</option>
-									<option value='Nagpur'>Nagpur</option>
-									<option value='Lucknow'>Lucknow</option>
-									<option value='Bhopal'>Bhopal</option>
-								</select>
+																<select id='countries' className='block m-2 md:min-w-0 rounded-md p-2 border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-green-600 sm:text-sm sm:leading-6 h-8' onChange={handleLocationChange} value={location}>
+																		<option value={loc}>{loc} ( Current location )</option>
+																		{LOCATIONS.map((city) => (
+																			<option key={city} value={city}>{city}</option>
+																		))}
+																</select>
 							)}
 							{window.location.pathname === '/patient-dashboard/consultations' ? (
 								<Link to='/patient-dashboard' className='m-2 flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500'>

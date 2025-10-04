@@ -1,5 +1,6 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
+import LOCATIONS from '../constants/locations';
 import { useNavigate } from 'react-router-dom';
 import toast, { Toaster } from 'react-hot-toast';
 
@@ -332,24 +333,12 @@ function UpdateProfile() {
 									</label>
 								</div>
 								<div className='mt-1'>
-									<select id='countries' className='block w-full rounded-md p-2 border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-green-600 sm:text-sm sm:leading-6'>
-										{doctor.location === '' ? <option selected>Choose a location</option> : <option selected>{doctor.location}</option>}
-										<option value='Jaipur'>Jaipur</option>
-										<option value='Delhi'>Delhi</option>
-										<option value='Bangalore'>Bangalore</option>
-										<option value='Kharagpur'>Kharagpur</option>
-										<option value='Mumbai'>Mumbai</option>
-										<option value='Chennai'>Chennai</option>
-										<option value='Kolkata'>Kolkata</option>
-										<option value='Hyderabad'>Hyderabad</option>
-										<option value='Pune'>Pune</option>
-										<option value='Ahmedabad'>Ahmedabad</option>
-										<option value='Surat'>Srinagar</option>
-										<option value='Kanpur'>Kanpur</option>
-										<option value='Nagpur'>Nagpur</option>
-										<option value='Lucknow'>Lucknow</option>
-										<option value='Bhopal'>Bhopal</option>
-									</select>
+																		<select id='countries' className='block w-full rounded-md p-2 border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-green-600 sm:text-sm sm:leading-6'>
+																				{doctor.location === '' ? <option selected>Choose a location</option> : <option selected>{doctor.location}</option>}
+																				{LOCATIONS.map((city) => (
+																					<option key={city} value={city}>{city}</option>
+																				))}
+																		</select>
 								</div>
 							</div>
 
@@ -397,13 +386,12 @@ function UpdateProfile() {
 									</label>
 								</div>
 								<div className='mt-1'>
-									<select id='countries' className='block w-full rounded-md p-2 border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-green-600 sm:text-sm sm:leading-6'>
-										{patient.location === '' ? <option selected>Choose a location</option> : <option selected>{patient.location}</option>}
-										<option value='Jaipur'>Jaipur</option>
-										<option value='Delhi'>Delhi</option>
-										<option value='Bangalore'>Bangalore</option>
-										<option value='Kharagpur'>Kharagpur</option>
-									</select>
+																		<select id='countries' className='block w-full rounded-md p-2 border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-green-600 sm:text-sm sm:leading-6'>
+																				{patient.location === '' ? <option selected>Choose a location</option> : <option selected>{patient.location}</option>}
+																				{LOCATIONS.map((city) => (
+																					<option key={city} value={city}>{city}</option>
+																				))}
+																		</select>
 								</div>
 							</div>
 
