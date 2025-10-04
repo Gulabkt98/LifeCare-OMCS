@@ -29,7 +29,7 @@ function BookedAppointments() {
 		}
 		const fetchAppointments = async () => {
 			try {
-				const appointments = await fetch('http://localhost:6969/appointment/getAppointmentsByPatient', {
+				const appointments = await fetch('https://lifecare-omcs-backend.onrender.com/appointment/getAppointmentsByPatient', {
 					method: 'POST',
 					headers: {
 						'Content-Type': 'application/json',
@@ -46,7 +46,7 @@ function BookedAppointments() {
 				const appData = await appointments.json();
 				appData.map(async (app, index) => {
 					try {
-						const doctorData = await fetch('http://localhost:6969/doctor/getByEmail', {
+						const doctorData = await fetch('https://lifecare-omcs-backend.onrender.com/doctor/getByEmail', {
 							method: 'POST',
 							headers: {
 								'Content-Type': 'application/json',

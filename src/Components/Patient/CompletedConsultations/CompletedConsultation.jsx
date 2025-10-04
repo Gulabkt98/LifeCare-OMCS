@@ -29,7 +29,7 @@ function CompletedConsultations() {
 		}
 		const fetchCompleted = async () => {
 			try {
-				const patientResponse = await fetch('http://localhost:6969/patient/getByEmail', {
+				const patientResponse = await fetch('https://lifecare-omcs-backend.onrender.com/patient/getByEmail', {
 					method: 'POST',
 					headers: {
 						'Content-Type': 'application/json',
@@ -45,7 +45,7 @@ function CompletedConsultations() {
 				patient.doctor.map(async (doc) => {
 					if (doc.status === 'completed') {
 						try {
-							const doctorResponse = await fetch('http://localhost:6969/doctor/getByEmail', {
+							const doctorResponse = await fetch('https://lifecare-omcs-backend.onrender.com/doctor/getByEmail', {
 								method: 'POST',
 								headers: {
 									'Content-Type': 'application/json',

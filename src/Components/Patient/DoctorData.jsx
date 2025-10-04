@@ -25,7 +25,7 @@ function DoctorData({ location }) {
 		}
 		const fetchData = async () => {
 			try {
-				const doctorResponse = await fetch('http://localhost:6969/doctor/getByLocation', {
+				const doctorResponse = await fetch('https://lifecare-omcs-backend.onrender.com/doctor/getByLocation', {
 					// This API endpoint sends an array of doctors based on the location
 					method: 'POST',
 					headers: {

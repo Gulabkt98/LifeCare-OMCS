@@ -42,7 +42,7 @@ export default function TableCard(data) {
 		}
 
 		try {
-			const response = await fetch('http://localhost:6969/patient/getByEmail', {
+			const response = await fetch('https://lifecare-omcs-backend.onrender.com/patient/getByEmail', {
 				method: 'POST',
 				headers: {
 					'Content-Type': 'application/json',
@@ -75,7 +75,7 @@ export default function TableCard(data) {
 								patient.doctor.splice(doctor_to_remove, 1);
 
 								try {
-									const updatePatientResponse = await fetch('http://localhost:6969/patient/updatePatient', {
+									const updatePatientResponse = await fetch('https://lifecare-omcs-backend.onrender.com/patient/updatePatient', {
 										method: 'POST',
 										headers: {
 											'Content-Type': 'application/json',
@@ -189,7 +189,7 @@ export default function TableCard(data) {
 							console.log('Feedback submitted: ', updateDoctor);
 							toast.success('Feedback submitted successfully');
 							try {
-								const response = await fetch('http://localhost:6969/email/sendMail', {
+								const response = await fetch('https://lifecare-omcs-backend.onrender.com/email/sendMail', {
 									method: 'POST',
 									headers: {
 										'Content-Type': 'application/json',

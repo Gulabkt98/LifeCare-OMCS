@@ -74,7 +74,7 @@ export default function PendingCard({ index, data, status }) {
 		let flag = true;
 		const patientEmail = data.email;
 		const doctorEmail = localStorage.getItem('userEmail');
-		const doc_data_to_update_response = await authFetch('http://localhost:6969/doctor/getByEmail', {
+		const doc_data_to_update_response = await authFetch('https://lifecare-omcs-backend.onrender.com/doctor/getByEmail', {
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/json',
@@ -117,7 +117,7 @@ export default function PendingCard({ index, data, status }) {
 		const req_id = data.id;
 		console.log(req_id);
 		try {
-			const response = await authFetch('http://localhost:6969/patient/getByEmail', {
+			const response = await authFetch('https://lifecare-omcs-backend.onrender.com/patient/getByEmail', {
 				method: 'POST',
 				headers: {
 					'Content-Type': 'application/json',
@@ -326,7 +326,7 @@ export default function PendingCard({ index, data, status }) {
 						console.error('Error updating doctor:', errorMessage);
 						toast.error('Internal server error');
 					}
-					const response = await authFetch('http://localhost:6969/appointment/deleteAppointment', {
+					const response = await authFetch('https://lifecare-omcs-backend.onrender.com/appointment/deleteAppointment', {
 						method: 'POST',
 						headers: {
 							'Content-Type': 'application/json',
@@ -507,7 +507,7 @@ export default function PendingCard({ index, data, status }) {
 					doctorEmail: doctorEmail,
 					content: cont, //need to change by the input
 				};
-				const response = await authFetch('http://localhost:6969/prescription/createPrescription', {
+				const response = await authFetch('https://lifecare-omcs-backend.onrender.com/prescription/createPrescription', {
 					method: 'POST',
 					headers: {
 						'Content-Type': 'application/json',
@@ -523,7 +523,7 @@ export default function PendingCard({ index, data, status }) {
 				console.log('Prescription created successfully:', prescrip_data);
 				setShowModal(true);
 
-				const patient_response = await authFetch('http://localhost:6969/patient/getByEmail', {
+				const patient_response = await authFetch('https://lifecare-omcs-backend.onrender.com/patient/getByEmail', {
 					method: 'POST',
 					headers: {
 						'Content-Type': 'application/json',
@@ -728,7 +728,7 @@ export default function PendingCard({ index, data, status }) {
 					date: date,
 					time: time,
 				};
-				const response = await authFetch('http://localhost:6969/appointment/createAppointment', {
+				const response = await authFetch('https://lifecare-omcs-backend.onrender.com/appointment/createAppointment', {
 					method: 'POST',
 					headers: {
 						'Content-Type': 'application/json',

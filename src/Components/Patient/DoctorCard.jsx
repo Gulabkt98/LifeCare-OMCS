@@ -61,7 +61,7 @@ export default function DoctorCard(props) {
 		const symptoms = inputValue;
 		let dupFlag = false;
 		try {
-			const patientResponse = await authFetch('http://localhost:6969/patient/getByEmail', {
+			const patientResponse = await authFetch('https://lifecare-omcs-backend.onrender.com/patient/getByEmail', {
 				// API endpoint to get patient by email
 				method: 'POST',
 				headers: {
@@ -101,7 +101,7 @@ export default function DoctorCard(props) {
 					},
 				};
 
-				const response = await authFetch('http://localhost:6969/patient/updatePatient', {
+				const response = await authFetch('https://lifecare-omcs-backend.onrender.com/patient/updatePatient', {
 					method: 'POST',
 					headers: {
 						'Content-Type': 'application/json',
@@ -129,7 +129,7 @@ export default function DoctorCard(props) {
 		let dupFlag2 = false;
 		if (!dupFlag) {
 			try {
-				const doctorResponse = await authFetch('http://localhost:6969/doctor/getByEmail', {
+				const doctorResponse = await authFetch('https://lifecare-omcs-backend.onrender.com/doctor/getByEmail', {
 					method: 'POST',
 					headers: {
 						'Content-Type': 'application/json',
@@ -156,7 +156,7 @@ export default function DoctorCard(props) {
 				});
 
 				if (!dupFlag2) {
-					const doctorResponse2 = await authFetch('http://localhost:6969/doctor/updateDoctor', {
+					const doctorResponse2 = await authFetch('https://lifecare-omcs-backend.onrender.com/doctor/updateDoctor', {
 						// Update doctor data with new consultation request
 						method: 'POST',
 						headers: {

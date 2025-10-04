@@ -54,7 +54,7 @@ function UpdateProfile() {
 		}
 		async function fetchData() {
 			if (isDoctor) {
-				const response = await authFetch('http://localhost:6969/doctor/getByEmail', {
+				const response = await authFetch('https://lifecare-omcs-backend.onrender.com/doctor/getByEmail', {
 					method: 'POST',
 					headers: {
 						'Content-Type': 'application/json',
@@ -66,7 +66,7 @@ function UpdateProfile() {
 				const data = await response.json();
 				return setDoctor(data);
 			} else {
-				const response = await authFetch('http://localhost:6969/patient/getByEmail', {
+				const response = await authFetch('https://lifecare-omcs-backend.onrender.com/patient/getByEmail', {
 					method: 'POST',
 					headers: {
 						'Content-Type': 'application/json',
@@ -177,7 +177,7 @@ function UpdateProfile() {
 					workingHours,
 				};
 
-				const response = await authFetch('http://localhost:6969/doctor/updateDoctor', {
+				const response = await authFetch('https://lifecare-omcs-backend.onrender.com/doctor/updateDoctor', {
 					method: 'POST',
 					headers: {
 						'Content-Type': 'application/json',
@@ -211,7 +211,7 @@ function UpdateProfile() {
 					location,
 				};
 
-				const response = await authFetch('http://localhost:6969/patient/updatePatient', {
+				const response = await authFetch('https://lifecare-omcs-backend.onrender.com/patient/updatePatient', {
 					method: 'POST',
 					headers: {
 						'Content-Type': 'application/json',

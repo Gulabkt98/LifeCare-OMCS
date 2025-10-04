@@ -48,7 +48,7 @@ const DoctorProfile = () => {
 
 		const fetchDoctor = async () => {
 			try {
-				const response = await authFetch('http://localhost:6969/doctor/getByEmail', {
+				const response = await authFetch('https://lifecare-omcs-backend.onrender.com/doctor/getByEmail', {
 					method: 'POST',
 					headers: {
 						'Content-Type': 'application/json',

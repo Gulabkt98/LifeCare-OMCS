@@ -29,7 +29,7 @@ function PendingData({ status }) {
 
 		const fetchData = async () => {
 			try {
-				const doctorResponse = await fetch('http://localhost:6969/doctor/getByEmail', {
+				const doctorResponse = await fetch('https://lifecare-omcs-backend.onrender.com/doctor/getByEmail', {
 					method: 'POST',
 					headers: {
 						'Content-Type': 'application/json',
@@ -106,7 +106,7 @@ function PendingData({ status }) {
 					const doctorObject = {
 						email: doctorEmail,
 					};
-					const appointmentsResponse = await fetch('http://localhost:6969/appointment/getAppointmentsByDoctor', {
+					const appointmentsResponse = await fetch('https://lifecare-omcs-backend.onrender.com/appointment/getAppointmentsByDoctor', {
 						method: 'POST',
 						headers: {
 							'Content-Type': 'application/json',
