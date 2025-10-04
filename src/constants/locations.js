@@ -1,7 +1,7 @@
 // Central list of supported locations across the app.
 // Edit this array to add/remove locations; all dropdowns will update automatically.
 export const LOCATIONS = [
-    'Barmer',
+  'Barmer',
   'Jodhpur',
   'Jaipur',
   'Delhi',
